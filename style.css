@@ -1,8 +1,9 @@
 @font-face {
   font-family: CalcFont;
-  src: url('Calculator.ttf');
+  src: url("Calculator.ttf");
 }
 
+/*Styling for the site's body*/
 html {
   margin: 0;
   padding: 0;
@@ -21,12 +22,51 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("repeating-chevrons.svg");
+  background-size: 25%;
 }
 
+/*Styling for the SVG Background Link*/
+#siteLink {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: darkslategray;
+  height: 22vh;
+  width: 11vw;
+  border-bottom-left-radius: 100%;
+  padding-left: 1vw;
+  /* border-bottom-right-radius: 100%; */
+  transition: width 1s, height 1s;
+}
+
+#siteLink p {
+  font-size: 1.5vw;
+  opacity: 0;
+  transition: opacity 1s;
+  color: white;
+}
+
+#siteLink a {
+  color: white;
+}
+
+#siteLink:hover {
+  width: 16.5vw;
+  height: 33vh;
+  transition: width 1s, height 1s;
+}
+
+#siteLink:hover p {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+/*Styling for the calculator's body*/
 #calcBody {
   height: 95vh;
   width: 60vw;
-  background-color: darkgray;
+  background-color: darkslategray;
   border-radius: 3vw;
   padding: 0;
   margin: 0;
@@ -36,6 +76,7 @@ body {
   align-items: center;
 }
 
+/*Styling for the math display*/
 #screen {
   background-color: lightgreen;
   width: 80%;
@@ -51,6 +92,7 @@ body {
   overflow: hidden;
 }
 
+/*styling for the button section of the calculaotr*/
 #buttons {
   width: 95%;
   height: 60vh;
@@ -58,20 +100,56 @@ body {
   border-radius: 2vw;
   margin-top: 5vh;
   box-sizing: border-box;
-  border: 1vw solid crimson;
+  border: 1vw solid greenyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/*Styling for the buttons with numbers*/
+#numbers {
+  width: 75%;
+  height: 50vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#numbers button {
+  float: left;
+  width: 33%;
+  height: 25%;
+  margin: 0;
+  font-size: 3vw;
+  font-weight: bold;
+  border: 0.25vw solid black;
+}
+
+/*Styling for the buttons with math operators*/
 #operators {
   width: 25%;
   height: 50vh;
   box-sizing: border-box;
-  border: 10px solid brown;
-  /* direction: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
+  padding: 0;
+  margin: 0;
+  overflow: visible;
 }
 
-/* #operators button {
+#operators button {
   width: 50%;
   height: 25%;
-} */
+  margin: 0;
+  float: left;
+  font-size: 2vw;
+  font-weight: bold;
+  border: 0.25vw solid black;
+}
+
+/*General button styling*/
+button:hover {
+  background-color: lightgray;
+}
+
+button:active {
+  background-color: lightgreen;
+}

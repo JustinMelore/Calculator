@@ -15,18 +15,45 @@
 </head>
 
 <body>
+    <!--Small section for attributing SVG Backgrounds-->
+    <div id="siteLink"><p>Background provided by <a href="https://www.svgbackgrounds.com/">SVG Backgrounds</a></p></div>
+
+    <!--Main content-->
     <div id="calcBody">
+        
+        <!--Where the math gets displayed-->
         <div id="screen"></div>
+
         <section id="buttons">
+            <!--Buttons with numbers on them (except for the clear button)-->
             <section id="numbers">
-
+                <button id="b1" onmousedown="buttonPress('b1')">1</button>
+                <button id="b2" onmousedown="buttonPress('b2')">2</button>
+                <button id="b3" onmousedown="buttonPress('b3')">3</button>
+                <button id="b4" onmousedown="buttonPress('b4')">4</button>
+                <button id="b5" onmousedown="buttonPress('b5')">5</button>
+                <button id="b6" onmousedown="buttonPress('b6')">6</button>
+                <button id="b7" onmousedown="buttonPress('b7')">7</button>
+                <button id="b8" onmousedown="buttonPress('b8')">8</button>
+                <button id="b9" onmousedown="buttonPress('b9')">9</button>
+                <button id="b." onmousedown="buttonPress('b.')">.</button>
+                <button id="b0" onmousedown="buttonPress('b0')">0</button>
+                <button id="bC" onmousedown="buttonPress('bC')">C</button>
             </section>
-            <section id="operators">
 
+            <!--Buttons with math operators on them-->
+            <section id="operators">
+                <button id="b+" onmousedown="buttonPress('b+')">+</button>
+                <button id="b-" onmousedown="buttonPress('b-')">-</button>
+                <button id="b*" onmousedown="buttonPress('b*')">*</button>
+                <button id="b/" onmousedown="buttonPress('b/')">/</button>
+                <button id="b(" onmousedown="buttonPress('b(')">(</button>
+                <button id="b)" onmousedown="buttonPress('b)')">)</button>
+                <button id="bBack" onmousedown="buttonPress('bBack')">Back</button>
+                <button id="b=" onmousedown="buttonPress('b=')">=</button>
             </section>
         </section>
     </div>
-
     <script src="script.js"></script>
 </body>
 
